@@ -1,13 +1,500 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Nueva línea de productos destacados"
+  >
+
+  <title>Productos destacados</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- CSS compilado desde Sass -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+  <main class="products">
+
+    <div class="products__container">
+
+      <header class="products__header">
+
+        <span class="products__label">
+          Nueva colección
+        </span>
+
+        <h1 class="products__title">
+          Productos destacados
+        </h1>
+
+        <p class="products__description">
+          Descubre nuestra nueva línea de productos, diseñada para ofrecer
+          calidad, comodidad y un estilo moderno.
+        </p>
+
+      </header>
+
+      <section
+        class="products__grid"
+        aria-label="Lista de productos"
+      >
+
+        <!-- Producto 1 -->
+        <article class="product-card">
+
+          <div class="product-card__image-wrapper">
+
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+              alt="Zapatillas deportivas Urban Runner"
+            >
+
+            <span class="product-card__badge">
+              Nuevo
+            </span>
+
+          </div>
+
+          <div class="product-card__body">
+
+            <span class="product-card__category">
+              Calzado deportivo
+            </span>
+
+            <h2 class="product-card__title">
+              Urban Runner
+            </h2>
+
+            <p class="product-card__description">
+              Zapatillas ligeras y cómodas para actividades deportivas
+              y para el uso diario.
+            </p>
+
+            <div class="product-card__footer">
+
+              <span class="product-card__price">
+                S/ 189.90
+              </span>
+
+              <button
+                class="product-card__button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal1"
+                aria-label="Ver detalles de Urban Runner"
+              >
+                Ver detalles
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card">
+
+          <div class="product-card__image-wrapper">
+
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+              alt="Reloj Smart Time"
+            >
+
+            <span class="product-card__badge product-card__badge--dark">
+              Popular
+            </span>
+
+          </div>
+
+          <div class="product-card__body">
+
+            <span class="product-card__category">
+              Accesorios
+            </span>
+
+            <h2 class="product-card__title">
+              Smart Time
+            </h2>
+
+            <p class="product-card__description">
+              Reloj elegante con diseño minimalista para combinar con
+              cualquier estilo.
+            </p>
+
+            <div class="product-card__footer">
+
+              <span class="product-card__price">
+                S/ 249.90
+              </span>
+
+              <button
+                class="product-card__button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal2"
+                aria-label="Ver detalles de Smart Time"
+              >
+                Ver detalles
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product-card">
+
+          <div class="product-card__image-wrapper">
+
+            <img
+              class="product-card__image"
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+              alt="Audífonos inalámbricos Sound Pro"
+            >
+
+            <span class="product-card__badge product-card__badge--offer">
+              Oferta
+            </span>
+
+          </div>
+
+          <div class="product-card__body">
+
+            <span class="product-card__category">
+              Tecnología
+            </span>
+
+            <h2 class="product-card__title">
+              Sound Pro
+            </h2>
+
+            <p class="product-card__description">
+              Audífonos inalámbricos con sonido envolvente, diseño cómodo
+              y batería de larga duración.
+            </p>
+
+            <div class="product-card__footer">
+
+              <span class="product-card__price">
+                S/ 159.90
+              </span>
+
+              <button
+                class="product-card__button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal3"
+                aria-label="Ver detalles de Sound Pro"
+              >
+                Ver detalles
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Modal del producto 1 -->
+  <div
+    class="modal fade product-modal"
+    id="productModal1"
+    tabindex="-1"
+    aria-labelledby="productModalTitle1"
+    aria-hidden="true"
+  >
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content product-modal__content">
+
+        <button
+          class="product-modal__close"
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar modal"
+        >
+          &times;
+        </button>
+
+        <div class="product-modal__layout">
+
+          <div class="product-modal__image-wrapper">
+
+            <img
+              class="product-modal__image"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+              alt="Zapatillas deportivas Urban Runner"
+            >
+
+          </div>
+
+          <div class="product-modal__body">
+
+            <span class="product-modal__category">
+              Calzado deportivo
+            </span>
+
+            <h2
+              class="product-modal__title"
+              id="productModalTitle1"
+            >
+              Urban Runner
+            </h2>
+
+            <p class="product-modal__description">
+              Zapatillas deportivas fabricadas con materiales resistentes,
+              ligeros y transpirables. Su diseño proporciona comodidad durante
+              caminatas, ejercicios y actividades diarias.
+            </p>
+
+            <ul class="product-modal__features">
+
+              <li class="product-modal__feature">
+                Material transpirable
+              </li>
+
+              <li class="product-modal__feature">
+                Suela antideslizante
+              </li>
+
+              <li class="product-modal__feature">
+                Disponible en varias tallas
+              </li>
+
+            </ul>
+
+            <span class="product-modal__price">
+              S/ 189.90
+            </span>
+
+            <button
+              class="product-modal__button"
+              type="button"
+            >
+              Comprar producto
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal del producto 2 -->
+  <div
+    class="modal fade product-modal"
+    id="productModal2"
+    tabindex="-1"
+    aria-labelledby="productModalTitle2"
+    aria-hidden="true"
+  >
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content product-modal__content">
+
+        <button
+          class="product-modal__close"
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar modal"
+        >
+          &times;
+        </button>
+
+        <div class="product-modal__layout">
+
+          <div class="product-modal__image-wrapper">
+
+            <img
+              class="product-modal__image"
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+              alt="Reloj Smart Time"
+            >
+
+          </div>
+
+          <div class="product-modal__body">
+
+            <span class="product-modal__category">
+              Accesorios
+            </span>
+
+            <h2
+              class="product-modal__title"
+              id="productModalTitle2"
+            >
+              Smart Time
+            </h2>
+
+            <p class="product-modal__description">
+              Reloj moderno con acabado elegante y estructura resistente.
+              Su diseño minimalista permite utilizarlo con ropa formal
+              y casual.
+            </p>
+
+            <ul class="product-modal__features">
+
+              <li class="product-modal__feature">
+                Correa ajustable
+              </li>
+
+              <li class="product-modal__feature">
+                Resistente a salpicaduras
+              </li>
+
+              <li class="product-modal__feature">
+                Diseño minimalista
+              </li>
+
+            </ul>
+
+            <span class="product-modal__price">
+              S/ 249.90
+            </span>
+
+            <button
+              class="product-modal__button"
+              type="button"
+            >
+              Comprar producto
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal del producto 3 -->
+  <div
+    class="modal fade product-modal"
+    id="productModal3"
+    tabindex="-1"
+    aria-labelledby="productModalTitle3"
+    aria-hidden="true"
+  >
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content product-modal__content">
+
+        <button
+          class="product-modal__close"
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar modal"
+        >
+          &times;
+        </button>
+
+        <div class="product-modal__layout">
+
+          <div class="product-modal__image-wrapper">
+
+            <img
+              class="product-modal__image"
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+              alt="Audífonos inalámbricos Sound Pro"
+            >
+
+          </div>
+
+          <div class="product-modal__body">
+
+            <span class="product-modal__category">
+              Tecnología
+            </span>
+
+            <h2
+              class="product-modal__title"
+              id="productModalTitle3"
+            >
+              Sound Pro
+            </h2>
+
+            <p class="product-modal__description">
+              Audífonos inalámbricos con sonido de alta calidad, diseño
+              ergonómico y batería preparada para largas sesiones de música,
+              estudio y entretenimiento.
+            </p>
+
+            <ul class="product-modal__features">
+
+              <li class="product-modal__feature">
+                Conexión Bluetooth
+              </li>
+
+              <li class="product-modal__feature">
+                Almohadillas acolchadas
+              </li>
+
+              <li class="product-modal__feature">
+                Hasta 20 horas de batería
+              </li>
+
+            </ul>
+
+            <span class="product-modal__price">
+              S/ 159.90
+            </span>
+
+            <button
+              class="product-modal__button"
+              type="button"
+            >
+              Comprar producto
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript de Bootstrap necesario para los modales -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+</body>
 </html>
